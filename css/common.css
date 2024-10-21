@@ -15,7 +15,7 @@ body {
 
 .gallery {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   list-style-type: none;
