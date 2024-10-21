@@ -35,5 +35,7 @@ for (let image of images) {
   img.classList.add("img");
   img.src = image.url;
   img.alt = image.alt;
-  element.append(img);
+  img.width = 300;
+  img.height = 300;
+  img.element.append(img);
 }
