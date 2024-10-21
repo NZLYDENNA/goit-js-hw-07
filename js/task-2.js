@@ -35,5 +35,5 @@ for (let image of images) {
   galleryImage.classList.add("galleryImage");
   galleryImage.src = image.url;
   galleryImage.alt = image.alt;
-  element.append(pic);
+  element.append(galleryImage);
 }
