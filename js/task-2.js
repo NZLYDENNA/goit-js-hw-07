@@ -26,13 +26,14 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-for (let image of images) {
-  const element = document.createElement("li");
-  element.classList.add("gallery__element");
-  gallery.append(element);
-  const pic = document.createElement("img");
-  pic.classList.add("pic");
-  pic.src = image.url;
-  pic.alt = image.alt;
-  element.append(pic);
-}
+
+const galleryMarkup = images
+  .map(
+    (image) =>
+      `<li class="gallery-item">
+      <img src="${image.url}" alt="${image.alt}" class="gallery-image">
+    </li>`
+  )
+  .join("");
+
+gallery.insertAdjacentHTML("beforeend", galleryMarkup);
