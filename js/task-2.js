@@ -26,14 +26,13 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-
 for (let image of images) {
   const element = document.createElement("li");
-  element.classList.add("gallery-item");
+  element.classList.add("gallery__element");
   gallery.append(element);
-  const galleryImage = document.createElement("img");
-  galleryImage.classList.add("galleryImage");
-  galleryImage.src = image.url;
-  galleryImage.alt = image.alt;
-  element.append(galleryImage);
+  const pic = document.createElement("img");
+  pic.classList.add("pic");
+  pic.src = image.url;
+  pic.alt = image.alt;
+  element.append(pic);
 }
