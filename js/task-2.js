@@ -29,13 +29,13 @@ const gallery = document.querySelector(`.gallery`);
 
 for (let image of images) {
   const element = document.createElement("li");
-  element.classList.add("gallery__element");
+  element.classList.add("galleryElement");
   gallery.append(element);
-  const img = document.createElement("img");
+  const img = document.createElement("imgElement");
   img.classList.add("img");
   img.src = image.url;
   img.alt = image.alt;
-  img.width = 300;
-  img.height = 300;
-  img.element.append(img);
+  img.width = 320;
+  img.height = 320;
+  element.append(img);
 }
