@@ -25,15 +25,27 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector(".gallery");
+const addImages = () => {
+  const listGallery = document.querySelector(".gallery");
+  const widthImage = 360;
+  const heightImage = 300;
 
-const galleryMarkup = images
-  .map(
-    (image) =>
-      `<li class="gallery-item">
-      <img src="${image.url}" alt="${image.alt}" class="gallery-image">
-    </li>`
-  )
-  .join("");
+  const galleryHTML = images
+    .map(
+      (image) =>
+        `<li class="list-item-image"><img src=${image.url} alt=${image.alt} width=${widthImage} height=${heightImage}></li>`
+    )
+    .join(" ");
 
-gallery.insertAdjacentHTML("beforeend", galleryMarkup);
+  listGallery.style.display = "flex";
+  listGallery.style.flexWrap = "wrap";
+  listGallery.style.columnGap = "24px";
+  listGallery.style.rowGap = "48px";
+  listGallery.style.listStyleType = "none";
+  listGallery.style.alignItems = "center";
+  listGallery.style.justifyContent = "center";
+
+  listGallery.insertAdjacentHTML("beforeend", galleryHTML);
+};
+
+addImages();
