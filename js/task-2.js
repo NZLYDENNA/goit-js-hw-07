@@ -27,19 +27,13 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-const createLiImage = (images) => {
-  for (const elem of images) {
-    const gallery = document.querySelector(".gallery");
-    const newLi = document.createElement("li");
-    gallery.append(newLi);
-
-    const img = document.createElement("img");
-    img.src = elem.url;
-    img.alt = elem.alt;
-    img.width = 200;
-    img.height = 200;
-    newLi.append(img);
-  }
-};
-
-createLiImage(images);
+for (let image of images) {
+  const element = document.createElement("li");
+  element.classList.add("gallery-item");
+  gallery.append(element);
+  const galleryImage = document.createElement("img");
+  galleryImage.classList.add("galleryImage");
+  galleryImage.src = image.url;
+  galleryImage.alt = image.alt;
+  element.append(galleryImage);
+}
