@@ -37,13 +37,13 @@ const addImages = () => {
     )
     .join(" ");
 
-  listGallery.style.display = "flex";
+  /*listGallery.style.display = "flex";
   listGallery.style.flexWrap = "wrap";
   listGallery.style.columnGap = "24px";
   listGallery.style.rowGap = "48px";
   listGallery.style.listStyleType = "none";
   listGallery.style.alignItems = "center";
-  listGallery.style.justifyContent = "center";
+  listGallery.style.justifyContent = "center";*/
 
   listGallery.insertAdjacentHTML("beforeend", galleryHTML);
 };
