@@ -27,12 +27,13 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-const galleryMarkup = images
-  .map(
-    (image) =>
-      `<li class="gallery-item">
-      <img src="${image.url}" alt="${image.alt}" class="gallery-image">
-    </li>`
-  )
-  .join("");
-gallery.insertAdjacentHTML("beforeend", galleryMarkup);
+for (let image of images) {
+  const element = document.createElement("li");
+  element.classList.add("gallery-item");
+  gallery.append(element);
+  const galleryImage = document.createElement("img");
+  galleryImage.classList.add("galleryImage");
+  galleryImage.src = image.url;
+  galleryImage.alt = image.alt;
+  element.append(pic);
+}
